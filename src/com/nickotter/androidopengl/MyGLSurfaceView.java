@@ -22,6 +22,8 @@ public class MyGLSurfaceView extends GLSurfaceView {
 	    queueEvent(new Runnable() {
 	        public void run() {
 	            _renderer.setColor(event.getX() / getWidth(), event.getY() / getHeight(), 1.0f);
+	            
+	            //rotate around the y-axis
 	            _renderer.setAngle(event.getX() / 10);
 	        }
 	    });

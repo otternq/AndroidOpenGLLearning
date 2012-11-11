@@ -38,6 +38,9 @@ public class MyGLRenderer implements Renderer {
 	 
 	    // clear the color buffer to show the ClearColor we called above...
 	    gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
+	    
+	    // set rotation
+	    gl.glRotatef(_angle, 0f, 1f, 0f);
 	 
 	    // set the color of our element
 	    gl.glColor4f(0.5f, 0f, 0f, 0.5f);
@@ -48,11 +51,6 @@ public class MyGLRenderer implements Renderer {
 	    // finally draw the vertices
 	    gl.glDrawElements(GL10.GL_TRIANGLES, _nrOfVertices, GL10.GL_UNSIGNED_SHORT, _indexBuffer);
 	    
-	    // set rotation
-	    gl.glRotatef(_angle, 0f, 1f, 0f);
-	 
-	    gl.glColor4f(0.5f, 0f, 0f, 0.5f);
-	    // code snipped
 	}
 
 	@Override
@@ -76,6 +74,10 @@ public class MyGLRenderer implements Renderer {
 	    _blue = b;
 	}
 	
+	/**
+	 * Sets the class level variable to the angle of rotation
+	 * @param angle The degree to have the rotation
+	 */
 	public void setAngle(float angle) {
 	    _angle = angle;
 	}
