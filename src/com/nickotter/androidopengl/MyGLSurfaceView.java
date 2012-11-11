@@ -8,12 +8,12 @@ import android.view.MotionEvent;
 public class MyGLSurfaceView extends GLSurfaceView {
 	
 	private static final String LOG_TAG = MyGLSurfaceView.class.getSimpleName();
-    private DrawSomethingRenderer _renderer;
+    private MyGLRenderer _renderer;
 
 	public MyGLSurfaceView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		
-		this._renderer = new DrawSomethingRenderer();
+		this._renderer = new MyGLRenderer();
 		
 		setRenderer(this._renderer);
 	}
