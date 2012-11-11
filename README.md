@@ -9,7 +9,7 @@ Goals
 -----
 - To create an Android Aplication using OpenGL
 - Allow a user to move an object on the screen
-- Allow a user to rotate an object
+- Allow a user to rotate an object or camera view
 
 References
 -----------
