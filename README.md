@@ -3,7 +3,7 @@ Android OpenGL Learning
 
 Purpose
 -------
-This repository is for me to prepare for CS420 (Games and the Virtual Environment) at the University of Idaho
+This repository is for me to prepare for [CS428](http://www2.cs.uidaho.edu/~jeffery/courses/428/lecture.html) (Games and the Virtual Environment) at the University of Idaho
 
 Goals
 -----
