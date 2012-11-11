@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!-- View Container -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:layout_gravity="top"
+        android:layout_weight=".9">
+        <view class="com.nickotter.androidopengl.MyGLSurfaceView" android:id="@+id/glSurface"
+            android:layout_width="fill_parent" android:layout_height="wrap_content">
+        </view>
+    </LinearLayout>
+
+    <!-- Controls Container -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:layout_gravity="bottom"
+        android:layout_weight=".1">
+        <Button android:id="@+id/leftButton" android:text="@+string/leftButtonLabel"
+            android:onClick="clickHandler" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:gravity="center"
+            android:layout_gravity="left" />
+        <Button android:id="@+id/rightButton" android:text="@+string/rightButtonLabel"
+            android:onClick="clickHandler" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:gravity="center"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+</LinearLayout>
