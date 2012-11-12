@@ -39,17 +39,17 @@ public class MyGLRenderer implements Renderer {
 	    // clear the color buffer to show the ClearColor we called above...
 	    gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 	    
-	    // set rotation
-	    gl.glRotatef(_angle, 0f, 1f, 0f);
+	    // set rotation (will rotate every frame - x frames per second)
+	    gl.glRotatef(this._angle, 0f, 1f, 0f);
 	 
 	    // set the color of our element
 	    gl.glColor4f(0.5f, 0f, 0f, 0.5f);
 	 
 	    // define the vertices we want to draw
-	    gl.glVertexPointer(3, GL10.GL_FLOAT, 0, _vertexBuffer);
+	    gl.glVertexPointer(3, GL10.GL_FLOAT, 0, this._vertexBuffer);
 	 
 	    // finally draw the vertices
-	    gl.glDrawElements(GL10.GL_TRIANGLES, _nrOfVertices, GL10.GL_UNSIGNED_SHORT, _indexBuffer);
+	    gl.glDrawElements(GL10.GL_TRIANGLES, this._nrOfVertices, GL10.GL_UNSIGNED_SHORT, this._indexBuffer);
 	    
 	}
 
@@ -64,14 +64,14 @@ public class MyGLRenderer implements Renderer {
 		
 		// preparation
 	    gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
-	    initTriangle();
+	    this.initTriangle();
 
 	}
 	
 	public void setColor(float r, float g, float b) {
-	    _red = r;
-	    _green = g;
-	    _blue = b;
+	    this._red = r;
+	    this._green = g;
+	    this._blue = b;
 	}
 	
 	/**
@@ -79,19 +79,19 @@ public class MyGLRenderer implements Renderer {
 	 * @param angle The degree to have the rotation
 	 */
 	public void setAngle(float angle) {
-	    _angle = angle;
+	    this._angle = angle;
 	}
 	
 	private void initTriangle() {
 	    // float has 4 bytes
-	    ByteBuffer vbb = ByteBuffer.allocateDirect(_nrOfVertices * 3 * 4);
+	    ByteBuffer vbb = ByteBuffer.allocateDirect(this._nrOfVertices * 3 * 4);
 	    vbb.order(ByteOrder.nativeOrder());
-	    _vertexBuffer = vbb.asFloatBuffer();
+	    this._vertexBuffer = vbb.asFloatBuffer();
 	 
 	    // short has 2 bytes
-	    ByteBuffer ibb = ByteBuffer.allocateDirect(_nrOfVertices * 2);
+	    ByteBuffer ibb = ByteBuffer.allocateDirect(this._nrOfVertices * 2);
 	    ibb.order(ByteOrder.nativeOrder());
-	    _indexBuffer = ibb.asShortBuffer();
+	    this._indexBuffer = ibb.asShortBuffer();
 	 
 	    float[] coords = {
 	        -0.5f, -0.5f, 0f, // (x1, y1, z1)
@@ -99,11 +99,11 @@ public class MyGLRenderer implements Renderer {
 	        0f, 0.5f, 0f // (x3, y3, z3)
 	    };
 	 
-	    _vertexBuffer.put(coords);
-	    _indexBuffer.put(_indicesArray);
-	 
-	    _vertexBuffer.position(0);
-	    _indexBuffer.position(0);
+	    this._vertexBuffer.put(coords);
+	    this._indexBuffer.put(this._indicesArray);
+	    
+	    this._vertexBuffer.position(0);
+	    this._indexBuffer.position(0);
 	}
 
 }
