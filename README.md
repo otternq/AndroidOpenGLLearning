@@ -16,3 +16,4 @@ References
 - [Custom Views](http://developer.android.com/guide/topics/ui/custom-components.html) - How to add a custom view to layout.xml
 - [Custom Views - Constructors](http://stackoverflow.com/questions/8241975/how-can-i-use-glsurfaceview-in-a-linearlayout-together-with-other-views-such-as) - stackoverflow post for View constructor from layout.xml
 - [Android 3d Game tutorial](http://www.droidnova.com/android-3d-game-tutorial-part-i,312.html) - Basic OpenGL Application Tutorial
+- [Understanding OpenGL’s Matrices](http://www.learnopengles.com/understanding-opengls-matrices/)
