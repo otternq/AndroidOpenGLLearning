@@ -16,6 +16,10 @@ public class MyGLRenderer implements Renderer {
     private float _green = 0.2f;
     private float _blue = 0.2f;
     
+    private float x_pos = 0f;
+    private float y_pos = 0f;
+    private boolean changed = true;
+    
 	// new object variables we need
 	// a raw buffer to hold indices
 	private ShortBuffer _indexBuffer;
@@ -41,6 +45,11 @@ public class MyGLRenderer implements Renderer {
 	    
 	    // set rotation (will rotate every frame - x frames per second)
 	    gl.glRotatef(this._angle, 0f, 1f, 0f);
+	    
+	    //move the location of the triangle
+	    if(this.changed == true) {
+	    	this.setTrianglePosition();
+	    }
 	 
 	    // set the color of our element
 	    gl.glColor4f(0.5f, 0f, 0f, 0.5f);
@@ -82,6 +91,28 @@ public class MyGLRenderer implements Renderer {
 	    this._angle = angle;
 	}
 	
+	public void setPosition(float x, float y) {
+		this.x_pos = x;
+		this.y_pos = y;
+		this.changed = true;
+	}
+	
+	private void setTrianglePosition() {
+		
+		float[] coords = {
+	        -0.5f, -0.5f, 0f, // (x1, y1, z1)
+	        0.5f, -0.5f, 0f, // (x2, y2, z2)
+	        this.x_pos, this.y_pos, 0f // (x3, y3, z3)
+	    };
+		 
+		this._vertexBuffer.clear();
+		this._vertexBuffer.put(coords);
+		this._vertexBuffer.position(0);
+		
+		this.changed = false;
+		
+	}
+	
 	private void initTriangle() {
 	    // float has 4 bytes
 	    ByteBuffer vbb = ByteBuffer.allocateDirect(this._nrOfVertices * 3 * 4);
@@ -93,16 +124,10 @@ public class MyGLRenderer implements Renderer {
 	    ibb.order(ByteOrder.nativeOrder());
 	    this._indexBuffer = ibb.asShortBuffer();
 	 
-	    float[] coords = {
-	        -0.5f, -0.5f, 0f, // (x1, y1, z1)
-	        0.5f, -0.5f, 0f, // (x2, y2, z2)
-	        0f, 0.5f, 0f // (x3, y3, z3)
-	    };
-	 
-	    this._vertexBuffer.put(coords);
+	    
+	    this.setTrianglePosition();
 	    this._indexBuffer.put(this._indicesArray);
 	    
-	    this._vertexBuffer.position(0);
 	    this._indexBuffer.position(0);
 	}
 
