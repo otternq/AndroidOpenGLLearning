@@ -5,15 +5,15 @@ import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-public class MyGLSurfaceView extends GLSurfaceView {
+public class RotatingTriangleGLSurfaceView extends GLSurfaceView {
 	
-	private static final String LOG_TAG = MyGLSurfaceView.class.getSimpleName();
-    private DrawSomethingRenderer _renderer;
+	private static final String LOG_TAG = RotatingTriangleGLSurfaceView.class.getSimpleName();
+    private RotatingTriangleGLRenderer _renderer;
 
-	public MyGLSurfaceView(Context context, AttributeSet attrs) {
+	public RotatingTriangleGLSurfaceView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		
-		this._renderer = new DrawSomethingRenderer();
+		this._renderer = new RotatingTriangleGLRenderer();
 		
 		setRenderer(this._renderer);
 	}
@@ -22,6 +22,9 @@ public class MyGLSurfaceView extends GLSurfaceView {
 	    queueEvent(new Runnable() {
 	        public void run() {
 	            _renderer.setColor(event.getX() / getWidth(), event.getY() / getHeight(), 1.0f);
+	            
+	            //rotate around the y-axis
+	            _renderer.setAngle(event.getX() / 10);
 	        }
 	    });
 	    return true;
