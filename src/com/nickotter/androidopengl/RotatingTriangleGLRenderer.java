@@ -10,7 +10,7 @@ import javax.microedition.khronos.opengles.GL10;
 
 import android.opengl.GLSurfaceView.Renderer;
 
-public class MyGLRenderer implements Renderer {
+public class RotatingTriangleGLRenderer implements Renderer {
 	
 	private float _red = 0.9f;
     private float _green = 0.2f;

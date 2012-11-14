@@ -1,10 +1,10 @@
 <resources>
 
     <string name="app_name">AndroidOpenGL</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="intro">This is an app for me to learn both OpenGL ES on Android. The tabs are different renderings</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="leftButtonLabel">Left Button</string>
-    <string name="rightButtonLabel">Right Button</string>
+    
+    <string name="title_activity_main">Home</string>
+    <string name="title_rotating_triangle">Rotating Triangle</string>
 
 </resources>
