@@ -1,4 +1,4 @@
-package com.nickotter.androidopengl;
+package com.nickotter.androidopengl.rotatingtriangle;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

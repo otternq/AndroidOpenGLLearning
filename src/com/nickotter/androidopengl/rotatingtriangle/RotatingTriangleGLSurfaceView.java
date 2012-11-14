@@ -1,4 +1,4 @@
-package com.nickotter.androidopengl;
+package com.nickotter.androidopengl.rotatingtriangle;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;

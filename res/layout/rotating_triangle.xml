@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-        <view class="com.nickotter.androidopengl.RotatingTriangleGLSurfaceView" android:id="@+id/glSurface"
+        <view class="com.nickotter.androidopengl.rotatingtriangle.RotatingTriangleGLSurfaceView" android:id="@+id/glSurface"
             android:layout_width="fill_parent" android:layout_height="wrap_content">
         </view>
 

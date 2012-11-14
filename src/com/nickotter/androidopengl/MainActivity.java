@@ -1,5 +1,6 @@
 package com.nickotter.androidopengl;
 
+import com.nickotter.androidopengl.rotatingtriangle.*;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.annotation.TargetApi;
