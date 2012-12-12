@@ -7,9 +7,10 @@ Preparation for [CS428](http://www2.cs.uidaho.edu/~jeffery/courses/428/lecture.h
 
 Goals
 -----
-- To create an Android Aplication using OpenGL
-- Allow a user to move an object on the screen
-- Allow a user to rotate an object or camera view
+- [&#x2713;]To create an Android Aplication using OpenGL
+- [&#x2713;]Create a basic shape
+- [ ]Allow a user to move an object on the screen
+- [ ]Allow a user to rotate an object or camera view
 
 References
 -----------
