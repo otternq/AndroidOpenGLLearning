@@ -19,3 +19,4 @@ References
 - [Android 3d Game tutorial](http://www.droidnova.com/android-3d-game-tutorial-part-i,312.html) - Basic OpenGL Application Tutorial
 - [Understanding OpenGL’s Matrices](http://www.learnopengles.com/understanding-opengls-matrices/)
 - [Android Action Bar (for navigation)](http://developer.android.com/guide/topics/ui/actionbar.html)
+- [Smithwick, Mike; Verma, Mayank (2012-01-25). Pro OpenGL ES for Android (Professional Apress) (Kindle Location 308). Apress. Kindle Edition.](http://www.amazon.com/Pro-OpenGL-Android-Professional-Apress/dp/1430240024/ref=sr_1_1?ie=UTF8&qid=1357089208&sr=8-1&keywords=Pro+OpenGL+ES+for+Android)
