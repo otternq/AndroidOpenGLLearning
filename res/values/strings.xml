@@ -7,5 +7,6 @@
     <string name="title_activity_main">Home</string>
     <string name="title_rotating_triangle">Rotating Triangle</string>
     <string name="title_square">Square</string>
+    <string name="title_cube">Cube</string>
 
 </resources>
