@@ -21,13 +21,14 @@ public class SquareGLRenderer implements Renderer {
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
 		gl.glMatrixMode(GL10.GL_MODELVIEW);
 		gl.glLoadIdentity();
-		gl.glTranslatef(0.0f,  (float)Math.sin(mTransY),  -3.0f);
+		gl.glTranslatef((float)Math.cos(mTransX),  (float)Math.sin(mTransY),  -3.0f);
 		gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
 		gl.glEnableClientState(GL10.GL_COLOR_ARRAY);
 		
 		mSquare.draw(gl);
 		
 		mTransY += .075f;
+		mTransX += .075f;
 	}
 	
 	public void onSurfaceChanged(GL10 gl, int width, int height) {
@@ -61,6 +62,7 @@ public class SquareGLRenderer implements Renderer {
 	private boolean mTranslucentBackground;
 	private Square mSquare;
 	private float mTransY;
+	private float mTransX;
 	private float mAngle;
 	
 	
