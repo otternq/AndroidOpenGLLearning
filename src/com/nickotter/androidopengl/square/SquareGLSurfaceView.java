@@ -1,24 +1,24 @@
-package com.nickotter.androidopengl;
+package com.nickotter.androidopengl.square;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-public class RotatingTriangleGLSurfaceView extends GLSurfaceView {
+public class SquareGLSurfaceView extends GLSurfaceView {
 	
-	private static final String LOG_TAG = RotatingTriangleGLSurfaceView.class.getSimpleName();
-    private RotatingTriangleGLRenderer _renderer;
+	private static final String LOG_TAG = SquareGLSurfaceView.class.getSimpleName();
+    private SquareGLRenderer _renderer;
 
-	public RotatingTriangleGLSurfaceView(Context context, AttributeSet attrs) {
+	public SquareGLSurfaceView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		
-		this._renderer = new RotatingTriangleGLRenderer();
+		this._renderer = new SquareGLRenderer(true);
 		
 		setRenderer(this._renderer);
 	}
 	
-	public boolean onTouchEvent(final MotionEvent event) {
+	/*public boolean onTouchEvent(final MotionEvent event) {
 	    queueEvent(new Runnable() {
 	        public void run() {
 	            _renderer.setColor(event.getX() / getWidth(), event.getY() / getHeight(), 1.0f);
@@ -28,6 +28,6 @@ public class RotatingTriangleGLSurfaceView extends GLSurfaceView {
 	        }
 	    });
 	    return true;
-	}
+	}*/
 
 }
