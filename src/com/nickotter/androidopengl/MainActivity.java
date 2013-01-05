@@ -1,5 +1,9 @@
 package com.nickotter.androidopengl;
 
+import com.nickotter.androidopengl.rotatingtriangle.*;
+import com.nickotter.androidopengl.square.SquareFragment;
+import com.nickotter.androidopengl.cube.CubeFragment;
+
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.annotation.TargetApi;
@@ -40,6 +44,18 @@ public class MainActivity extends Activity {
             .setText(R.string.title_rotating_triangle)
             .setTabListener(new TabListener<RotatingTriangleFragment>(
                     this, "Basic", RotatingTriangleFragment.class));
+        actionBar.addTab(tab);
+        
+        tab = actionBar.newTab()
+        	.setText(R.string.title_square)
+        	.setTabListener(new TabListener<SquareFragment>(
+        			this, "Basic", SquareFragment.class));
+        actionBar.addTab(tab);
+        
+        tab = actionBar.newTab()
+        	.setText(R.string.title_cube)
+        	.setTabListener(new TabListener<CubeFragment>(
+        			this, "Basic", CubeFragment.class));
         actionBar.addTab(tab);
         
     }

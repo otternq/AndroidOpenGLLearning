@@ -1,5 +1,6 @@
-package com.nickotter.androidopengl;
+package com.nickotter.androidopengl.rotatingtriangle;
 
+import com.nickotter.androidopengl.*;
 import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.os.Bundle;
